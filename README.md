@@ -16,7 +16,7 @@ Attempted:
 Bugs:
 Extra spaces: 
     trimming works occasionally but may crash when there’s a newline or too many extra spaces or a tab
-
+    (if necessary, comment out the two lines in parse_run() that call noMoreSpaces())
 
 Files & Function Headers
 shell.c

@@ -117,6 +117,12 @@ void cd(char *whereto){
     printf("%s\n",strerror(errno));
   }
 }
+/*
+  What it does: redirects out
+  Arguments:
+    whereto: a pointer to the path
+  Return Value: None
+*/
 void redirOut(char *command[],int outLoc){
   char *file = command[outLoc+1]; //the file
   char **from = &command[0];//the command
@@ -128,6 +134,12 @@ void redirOut(char *command[],int outLoc){
   dup2(stdoutDupe,STDOUT_FILENO); 
   close(fd);
 }
+/*
+  What it does: redirects in
+  Arguments:
+    whereto: a pointer to the path
+  Return Value: None
+*/
 void redirIn(char *command[],int inLoc){
   char *file = command[inLoc+1];
   char **to = &command[0];

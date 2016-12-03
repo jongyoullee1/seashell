@@ -1,9 +1,9 @@
-seashell: shell.c
-  gcc shell.c -o signal
-  
-run: shell
-  ./shell
+seashell:	shell.c
+	gcc shell.c -o shell
+
+run:	seashell
+	./shell
 
 clean:
-  rm *~
-  rm .out
+	rm *~
+	rm .out

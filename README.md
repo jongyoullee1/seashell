@@ -50,6 +50,7 @@ what it does: gets the user and current directory and prints them to prompt user
 	Returns:
 		The index of command where target is found 
 Searches in command for target and returns the index
+
 ====================*/
 
 /*======== void redirOut() ==========
@@ -127,5 +128,6 @@ Example User Inputs:
   Multiple commands: ls -a -l;pwd;echo hello;exit
   Commands with extra spaces:    ls  -a    -l;   pwd
   Piping: ls -a -l | wc
+  
 ====================*/
 

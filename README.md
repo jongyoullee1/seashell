@@ -23,48 +23,54 @@ shell.c
 
 
 /*======== void run() ==========
+
 	Inputs:
-char *command[], a null terminated array of pointers to strings
+		char *command[], a null terminated array of pointers to strings
 	Returns:
-nothing
+		nothing
  
 forks a child process and executes the command, parent waits for child to exit
 ====================*/
 
 /*======== void promptUser() ==========
+
 	Inputs:
 		none
 	Returns:
 		none
+		
 what it does: gets the user and current directory and prints them to prompt user for command
 ====================*/
 
 /*======== int indexInArray() ==========
+
 	Inputs:
 		char *command[], an array of pointers to strings
-char *target, a string
-Returns:
-The index of command where target is found 
+		char *target, a string
+	Returns:
+		The index of command where target is found 
 Searches in command for target and returns the index
 ====================*/
 
 /*======== void redirOut() ==========
+
 	Inputs:
 		char *command[], an array of pointers to strings, where the pointers to the left of > represent the command whose stdin is being redirected and the pointers to the right of > represent the file we’re redirecting to
 int outLoc, location of > symbol
-Returns:
-	Nothing
+	Returns:
+		Nothing
 
 Redirects stdin of first command to stdout of other between two commands and executes the second command
 ====================*/
 
 
 /*======== void redirIn() ==========
+
 	Inputs:
 		char *command[], an array of pointers to strings, where the pointers to the right of < represent the command whose stdin is being redirected and the pointers to the left of < represent the file we’re redirecting into
 int inLoc, location of < symbol
-Returns:
-	Nothing
+	Returns:
+		Nothing
 
 
 Redirects stdin of first command to stdout of other between two commands and executes the second command
@@ -74,26 +80,30 @@ Redirects stdin of first command to stdout of other between two commands and exe
 
 
 /*======== void thepipe() ==========
+
 	Inputs:
 		char *pipecommand[], an array of pointers to strings, where the pointers to the left of the pipe character(|) represent the command whose stdin is being redirected and the pointers to the right of | represent the command that will be executed
 int pipelocation, index where pipe character(|) is found
-Returns:
-	Nothing
+	Returns:
+		Nothing
 
 
 Redirects stdin of first command to stdout of other between two commands and executes the second command
 ====================*/
+
 /*======== void noMoreSpaces() ==========
+
 	Input:
 		char *command[]
-What it does: Removes all white spaces in the given array of pointers
-Inputs:
-        command: array of pointers to string
-Return Value: None
+	Returns:
+		nothing
+
+Removes all white spaces in the given array of pointers
 ====================*/
 
 
 /*========void cd()============
+
 	Input:
 		char *whereto, a pointer to the path
 	Returns:
@@ -105,6 +115,7 @@ Changes directories
 
 
 /*======== void parse_run() ==========
+
 What it does: prompts user for input, separates the input by semicolons, loops through the array of pointers created,
               separates the strings pointed to using white spaces then runs the command by
               determining if cd, exit, <, > or pipe are called and executes those separately, otherwise calls the run function on the commands

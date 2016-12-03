@@ -30,6 +30,7 @@ nothing
  
 forks a child process and executes the command, parent waits for child to exit
 ====================*/
+
 /*======== void promptUser() ==========
 	Inputs:
 		none
@@ -37,6 +38,7 @@ forks a child process and executes the command, parent waits for child to exit
 		none
 what it does: gets the user and current directory and prints them to prompt user for command
 ====================*/
+
 /*======== int indexInArray() ==========
 	Inputs:
 		char *command[], an array of pointers to strings
@@ -45,13 +47,13 @@ Returns:
 The index of command where target is found 
 Searches in command for target and returns the index
 ====================*/
+
 /*======== void redirOut() ==========
 	Inputs:
 		char *command[], an array of pointers to strings, where the pointers to the left of > represent the command whose stdin is being redirected and the pointers to the right of > represent the file we’re redirecting to
 int outLoc, location of > symbol
 Returns:
 	Nothing
-
 
 Redirects stdin of first command to stdout of other between two commands and executes the second command
 ====================*/
@@ -115,3 +117,4 @@ Example User Inputs:
   Commands with extra spaces:    ls  -a    -l;   pwd
   Piping: ls -a -l | wc
 ====================*/
+
